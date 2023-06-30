@@ -2,7 +2,7 @@
 //trigger para migrar los registros que se registraron en el google form del facilitador a el master diario
 function triggerMigrarRegistrosRegistradosEnGoogleForm() {
   const { idDataBase, nameTables } = parametrosGlobales();
-  const { idBaseDeDatosMasterIndicadores } = idDataBase;
+  const { idBaseDeDatosMasterIndicadores, idBaseDeDatosEncuesta } = idDataBase;
   const {
     tablaRespuestasRegistroDecapacitacionesFacilitador,
     tablaMasterDiario,
@@ -131,6 +131,11 @@ function triggerMigrarRegistrosRegistradosEnGoogleForm() {
 
       //si la repuesta es success entonces actualizar la fila del registro que se migro al master diario
       if (insertar == "success") {
+        revisarUso(
+          [idBaseDeDatosMasterIndicadores, idBaseDeDatosEncuesta],
+          "VIC_TAL_HUM_Y_ADM_ESA_GOO_1007",
+          "Sin comentarios"
+        );
         //actualizar en base al indice el registro a un estado de MIGRADO
         //@param {Int} fila: posicion fila
         //@param {Int} columna: posicion columna
