@@ -9,7 +9,7 @@ function parametrosGlobales() {
     //ids de las base a utilizar
     idDataBase: {
       // idBaseDeDatosEncuesta: "1BI8XJVqte_gGtQQTAtKknNMd0F0bLUHt4YseZzEEUY4", //base copia no original
-      idBaseDeDatosEncuesta: "124CgTVdgIP4-5pSgvHdsTUpaCsyO6eamPQSvonLAMI8", //base copia no original
+      idBaseDeDatosEncuesta: "124CgTVdgIP4-5pSgvHdsTUpaCsyO6eamPQSvonLAMI8", //base original
       idBaseDeDatosMasterIndicadores:
         "1D_3zn6OUwwEAOtt6Y9F0ZKydZbRuiAhMRt1HonLzkmE",
     },
